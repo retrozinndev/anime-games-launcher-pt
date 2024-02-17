@@ -2,8 +2,8 @@
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
-Version: 0.0.0
-Release: 0%{dist}
+Version: 1.0.2.rc1
+Release: 1%{dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
 Url: https://github.com/retrozinndev/%{srcname}
@@ -11,7 +11,7 @@ Url: https://github.com/retrozinndev/%{srcname}
 # git clone https://github.com/retrozinndev/%{srcname}.git
 # cd %{srcname}
 # tito build --tgz
-Source0: %{name}-%{version}.tar.gz
+Source0: https://github.com/retrozinndev/%{srcname}/releases/%{version}.tar.gz
 
 BuildArch: noarch
 
@@ -58,7 +58,10 @@ ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
 %files
 %doc README.md
 %license LICENSE
-%{_bindir}/target
+%{_bindir}/build
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
+* Sat Feb 17 2024 João Dias <joaovodias@gmail.com>
+- Added new copr package built with tito
+
