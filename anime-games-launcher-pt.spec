@@ -1,14 +1,15 @@
-%global srcname anime-games-launcher
+%define installation_dir /usr/lib
+%global srcname anime-games-launcher-pt
 
-Name: %{srcname}
+Name: anime-games-launcher
 Version: 0.0.0
 Release: 0%{dist}
 License: GPLv3
-Summary: Universal linux launcher for anime games
-Url: https://github.com/retrozinndev/%{srcname}-pt
+Summary: Universal Linux launcher for anime games
+Url: https://github.com/retrozinndev/%{srcname}
 # Sources can be obtained by
-# git clone https://github.com/retrozinndev/anime-games-launcher-pt
-# cd anime-games-launcher-pt
+# git clone https://github.com/retrozinndev/%{srcname}.git
+# cd %{srcname}
 # tito build --tgz
 Source0: %{name}-%{version}.tar.gz
 
@@ -24,6 +25,7 @@ Requires: glibc
 #-- OPTIONAL DEPENDENCIES ------------------------------------------------------#
 Suggests: mangohud
 Suggests: gamescope
+Suggests: gamemode
 
 #-- BUILD DEPENDENCIES ---------------------------------------------------------#
 BuildRequires: rust
@@ -45,21 +47,18 @@ Anime Games Launcher is an universal launcher for anime games.
 %autosetup
 
 %build
-%git clone https://github.com/retrozinndev/anime-games-launcher-pt
-%mv %{srcname}-pt/ %{srcname}/
-%cd %{srcname}
-%cargo build --release
+cargo build --release
 
 %install
-%mkdir -p /usr/lib/%{srcname}
-%cp target/release/%{srcname} /usr/lib/%{srcname}
-%ln -s /usr/lib/%{srcname}/%{srcname} /usr/bin/anime-games-launcher
+mkdir -p %{installation_dir}/%{name}
+cp target/release/%{name} %{installation_dir}/%{name}
+ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
 %doc README.md
 %license LICENSE
-%{_bindir}/build
+%{_bindir}/target
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
