@@ -2,7 +2,7 @@
 
 Name: %{srcname}
 Version: 0.0.0
-Release: 0%\{?dist}
+Release: 0%{dist}
 License: GPLv3
 Summary: Universal linux launcher for anime games
 Url: https://github.com/retrozinndev/%{srcname}-pt
