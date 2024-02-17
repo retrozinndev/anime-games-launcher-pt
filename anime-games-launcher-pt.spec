@@ -2,7 +2,7 @@
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
-Version: 1.0.2.rc1
+Version: 1.0.3.rc1
 Release: 1%{dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
@@ -62,6 +62,9 @@ ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
+* Sat Feb 17 2024 João Dias <joaovodias@gmail.com>
+- new package built with tito
+
 * Sat Feb 17 2024 João Dias <joaovodias@gmail.com>
 - Added new copr package built with tito
 
