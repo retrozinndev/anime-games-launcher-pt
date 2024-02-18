@@ -5,7 +5,7 @@
 
 Name: anime-games-launcher
 Version: 1.0.2.rc2
-Release: 1%{dist}
+Release: 1%{?dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
 Url: https://github.com/retrozinndev/%{srcname}
@@ -65,12 +65,12 @@ cp -f %{buildroot}/assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
-%{install_dir}/*
-%{apps_dir}/*
-%{icon_dir}/*
+%{install_dir}
+%{apps_dir}
+%{icon_dir}
 %doc README.md
 %license LICENSE
-%{_bindir}/*
+%{_bindir}/
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
