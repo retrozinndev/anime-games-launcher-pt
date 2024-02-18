@@ -54,14 +54,14 @@ cargo build --release
 %install
 # copy binary and create link
 mkdir -p %{install_dir}
-cp -f %{buildroot}/target/release/%{name} %{install_dir}
+cp -f %{_builddir}/target/release/%{name} %{install_dir}
 ln -s %{install_dir}/%{name} /usr/bin/%{name}
 # apply exec permision to binary
 chmod +x %{install_dir}/%{name}
 # copy icon
-cp -f %{buildroot}/assets/images/icon.png %{icon_dir}
+cp -f %{_builddir}/assets/images/icon.png %{icon_dir}
 # copy desktop file
-cp -f %{buildroot}/assets/%{name}.desktop %{apps_dir}
+cp -f %{_builddir}/assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
