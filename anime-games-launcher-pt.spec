@@ -2,7 +2,7 @@
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
-Version: 1.0.3.rc1
+Version: 1.0.2.rc1
 Release: 1%{dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
@@ -62,9 +62,19 @@ ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
-* Sat Feb 17 2024 João Dias <joaovodias@gmail.com>
-- new package built with tito
-
-* Sat Feb 17 2024 João Dias <joaovodias@gmail.com>
-- Added new copr package built with tito
-
+- 1.0.2-rc1 - 21.01.2024
+ - Fixed typos in Portuguese Brazil (pt-br🇧🇷) translation.
+- 1.0.2 - 20.01.2024 krypt0nn
+ - Fixed German
+ - Replaced `v1_network_http_get` with more powerful `v1_network_fetch`
+- 1.0.1 - 20.01.2024
+  - Added Chinese
+  - Added Portuguese
+  - Added German
+  - Added outdated games category
+  - Added virtual desktop preference
+  - Added xxhash support
+  - Added `pre_transition` optional API
+  - Updated `v1_network_http_get` standard
+- 1.0.0 - 13.01.2024
+  - 🚀 Initial release
