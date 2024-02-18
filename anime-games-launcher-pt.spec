@@ -1,4 +1,6 @@
 %define install_dir /usr/lib/anime-games-launcher
+%define icon_dir /usr/share/icons/hicolor/512x512/apps
+%define apps_dir /usr/share/applications
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
@@ -50,37 +52,24 @@ Anime Games Launcher is an universal launcher for anime games.
 cargo build --release
 
 %install
+# copy binary and create link
 mkdir -p %{install_dir}
 cp target/release/%{name} %{install_dir}/%{name}
 ln -s %{install_dir}/%{name}/%{name} /usr/bin/%{name}
 chmod +x %{install_dir}/%{name}
-
+# copy icon
+cp %{build_dir}/assets/images/icon.png %{icon_dir}
+# copy desktop file
+cp %{build_dir}/assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
 %{install_dir}
 %{apps_dir}/*
+%{icon_dir}/*
 %doc README.md
 %license LICENSE
-%{_bindir}/build
+%{_bindir}/
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
-* 1.0.2.rc2
- Same release as v1.0.2-rc1. This is for fixing issues with tito, the rpm compiler for copr.
-* 1.0.2-rc1
- Fixed typos in Portuguese Brazil (pt-br🇧🇷) translation.
-* 1.0.2
- Fixed German
- Replaced `v1_network_http_get` with more powerful `v1_network_fetch`
-* 1.0.1
- Added Chinese
- Added Portuguese
- Added German
- Added outdated games category
- Added virtual desktop preference
- Added xxhash support
- Added `pre_transition` optional API
- Updated `v1_network_http_get` standard
-* 1.0.0
- 🚀 Initial release

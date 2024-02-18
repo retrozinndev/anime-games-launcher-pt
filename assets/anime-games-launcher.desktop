@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=Anime Games Launcher
 Icon=icon
-Exec=AppRun
+Exec=anime-games-launcher
 Type=Application
 Categories=Game
 Terminal=false
+StartupWMClass=moe.launcher.anime-games-launcher
