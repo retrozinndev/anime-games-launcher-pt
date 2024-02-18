@@ -1,4 +1,4 @@
-%define installation_dir /usr/lib
+%define install_dir /usr/lib/anime-games-launcher
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
@@ -50,33 +50,37 @@ Anime Games Launcher is an universal launcher for anime games.
 cargo build --release
 
 %install
-mkdir -p %{installation_dir}/%{name}
-cp target/release/%{name} %{installation_dir}/%{name}
-ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
+mkdir -p %{install_dir}
+cp target/release/%{name} %{install_dir}/%{name}
+ln -s %{install_dir}/%{name}/%{name} /usr/bin/%{name}
+chmod +x %{install_dir}/%{name}
+
 
 #-- FILES ---------------------------------------------------------------------#
 %files
+%{install_dir}
+%{apps_dir}/*
 %doc README.md
 %license LICENSE
 %{_bindir}/build
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
-* 1.0.2.rc2 - 17.02.2024
- - Same release as v1.0.2-rc1. This is for fixing issues with tito, the rpm compiler for copr.
-* 1.0.2-rc1 - 21.01.2024
- - Fixed typos in Portuguese Brazil (pt-br🇧🇷) translation.
-* 1.0.2 - 20.01.2024 krypt0nn
- - Fixed German
- - Replaced `v1_network_http_get` with more powerful `v1_network_fetch`
-* 1.0.1 - 20.01.2024
-  - Added Chinese
-  - Added Portuguese
-  - Added German
-  - Added outdated games category
-  - Added virtual desktop preference
-  - Added xxhash support
-  - Added `pre_transition` optional API
-  - Updated `v1_network_http_get` standard
-* 1.0.0 - 13.01.2024
-  - 🚀 Initial release
+* 1.0.2.rc2
+ Same release as v1.0.2-rc1. This is for fixing issues with tito, the rpm compiler for copr.
+* 1.0.2-rc1
+ Fixed typos in Portuguese Brazil (pt-br🇧🇷) translation.
+* 1.0.2
+ Fixed German
+ Replaced `v1_network_http_get` with more powerful `v1_network_fetch`
+* 1.0.1
+ Added Chinese
+ Added Portuguese
+ Added German
+ Added outdated games category
+ Added virtual desktop preference
+ Added xxhash support
+ Added `pre_transition` optional API
+ Updated `v1_network_http_get` standard
+* 1.0.0
+ 🚀 Initial release
