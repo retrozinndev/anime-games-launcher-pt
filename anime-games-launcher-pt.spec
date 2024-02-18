@@ -11,7 +11,7 @@ Url: https://github.com/retrozinndev/%{srcname}
 # git clone https://github.com/retrozinndev/%{srcname}.git
 # cd %{srcname}
 # tito build --tgz
-Source0: https://github.com/retrozinndev/%{srcname}/releases/%{version}.tar.gz
+Source0: https://github.com/retrozinndev/%{srcname}/releases/tag/%{version}.tar.gz
 
 BuildArch: noarch
 
