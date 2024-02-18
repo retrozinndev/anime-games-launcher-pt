@@ -62,12 +62,12 @@ ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
-- 1.0.2-rc1 - 21.01.2024
+* 1.0.2-rc1 - 21.01.2024
  - Fixed typos in Portuguese Brazil (pt-br🇧🇷) translation.
-- 1.0.2 - 20.01.2024 krypt0nn
+* 1.0.2 - 20.01.2024 krypt0nn
  - Fixed German
  - Replaced `v1_network_http_get` with more powerful `v1_network_fetch`
-- 1.0.1 - 20.01.2024
+* 1.0.1 - 20.01.2024
   - Added Chinese
   - Added Portuguese
   - Added German
@@ -76,5 +76,5 @@ ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
   - Added xxhash support
   - Added `pre_transition` optional API
   - Updated `v1_network_http_get` standard
-- 1.0.0 - 13.01.2024
+* 1.0.0 - 13.01.2024
   - 🚀 Initial release
