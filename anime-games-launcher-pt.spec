@@ -2,7 +2,7 @@
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
-Version: 1.0.2.rc1
+Version: 1.0.2.rc2
 Release: 1%{dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
@@ -62,6 +62,8 @@ ln -s %{installation_dir}/%{name}/%{name} /usr/bin/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
+* 1.0.2.rc2 - 17.02.2024
+ - Same release as v1.0.2-rc1. This is for fixing issues with tito, the rpm compiler for copr.
 * 1.0.2-rc1 - 21.01.2024
  - Fixed typos in Portuguese Brazil (pt-br🇧🇷) translation.
 * 1.0.2 - 20.01.2024 krypt0nn
