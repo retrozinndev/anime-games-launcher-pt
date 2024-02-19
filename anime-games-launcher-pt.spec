@@ -52,7 +52,7 @@ sudo cp -f assets/%{name}.desktop %{apps_dir}
 
 #-- LAUNCHER FILES ------------------------------------------------------------#
 %files
-%config $HOME/.local/share/%{name}/config.json
+%config %{getenv:HOME}/.local/share/%{name}/config.json
 %doc README.md
 %license LICENSE
 %{install_dir}
