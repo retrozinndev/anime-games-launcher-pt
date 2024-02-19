@@ -16,8 +16,6 @@ Url: https://github.com/retrozinndev/%{srcname}
 Source0: https://github.com/retrozinndev/%{srcname}/archive/refs/tags/v%{version}.tar.gz
 BuildArch: noarch
 
-%define srcdir %{_builddir}/%{name}-%{version}-%{release}.%{_arch}
-
 #-- APPLICATION DEPENDENCIES ---------------------------------------------------#
 Requires: git
 Requires: libcurl
@@ -55,14 +53,14 @@ cargo build --release
 %install
 # copy binary and create link
 mkdir -p %{install_dir}
-cp -f %{srcdir}/target/release/%{name} %{install_dir}
+cp -f target/release/%{name} %{install_dir}
 ln -s %{install_dir}/%{name} /usr/bin/%{name}
 # apply exec permision to binary
 chmod +x %{install_dir}/%{name}
 # copy icon
-cp -f %{srcdir}/assets/images/icon.png %{icon_dir}
+cp -f assets/images/icon.png %{icon_dir}
 # copy desktop file
-cp -f %{srcdir}/assets/%{name}.desktop %{apps_dir}
+cp -f assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
