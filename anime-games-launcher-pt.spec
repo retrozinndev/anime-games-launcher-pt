@@ -28,18 +28,6 @@ Suggests: mangohud
 Suggests: gamescope
 Suggests: gamemode
 
-#-- BUILD DEPENDENCIES ---------------------------------------------------------#
-BuildRequires: rust
-BuildRequires: cargo
-BuildRequires: git
-BuildRequires: libcurl
-BuildRequires: libadwaita
-BuildRequires: gtk4
-BuildRequires: glibc
-BuildRequires: p7zip
-BuildRequires: gcc
-BuildRequires: gcc-c++
-
 %description
 Anime Games Launcher is an universal launcher for anime games.
 
@@ -51,15 +39,15 @@ Anime Games Launcher is an universal launcher for anime games.
 
 %install
 # copy binary and create link
-mkdir -p %{install_dir}
-cp -f %{name} %{install_dir}
-ln -s %{install_dir}/%{name} /usr/bin/%{name}
+sudo mkdir -p %{install_dir}
+sudo cp -f %{name} %{install_dir}
+sudo ln -sf %{install_dir}/%{name} /usr/bin/%{name}
 # apply exec permision to binary
-chmod +x %{install_dir}/%{name}
+sudo chmod +x %{install_dir}/%{name}
 # copy icon
-cp -f assets/icon.png %{icon_dir}
+sudo cp -f assets/icon.png %{icon_dir}
 # copy desktop file
-cp -f assets/%{name}.desktop %{apps_dir}
+sudo cp -f assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
