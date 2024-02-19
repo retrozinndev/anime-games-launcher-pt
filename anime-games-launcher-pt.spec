@@ -38,9 +38,10 @@ Anime Games Launcher is an universal launcher for anime games.
 %build
 
 %install
-# copy binary and create link
+# copy binary
 sudo mkdir -p %{install_dir}
 sudo cp -f %{name} %{install_dir}
+# create link of binary
 sudo ln -sf %{install_dir}/%{name} %{_bindir}/%{name}
 # apply exec permision to binary
 sudo chmod +x %{install_dir}/%{name}
@@ -49,13 +50,13 @@ sudo cp -f assets/icon.png %{icon_dir}
 # copy desktop file
 sudo cp -f assets/%{name}.desktop %{apps_dir}
 
-#-- FILES ---------------------------------------------------------------------#
+#-- LAUNCHER FILES ------------------------------------------------------------#
 %files
+%doc README.md
+%license LICENSE
 %{install_dir}
 %{icon_dir}/icon.png
 %{apps_dir}/%{name}.desktop
-%doc README.md
-%license LICENSE
 %{_bindir}/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
