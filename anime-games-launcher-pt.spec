@@ -1,6 +1,6 @@
-%define install_dir /usr/lib/anime-games-launcher
-%define icon_dir /usr/share/icons/hicolor/512x512/apps
-%define apps_dir /usr/share/applications
+%define install_dir %{_libdir}/anime-games-launcher
+%define icon_dir %{_datarootdir}/icons/hicolor/512x512/apps
+%define apps_dir %{_datarootdir}/applications
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
@@ -41,16 +41,13 @@ Anime Games Launcher is an universal launcher for anime games.
 # copy binary and create link
 sudo mkdir -p %{install_dir}
 sudo cp -f %{name} %{install_dir}
-sudo ln -sf %{install_dir}/%{name} /usr/bin/%{name}
+sudo ln -sf %{install_dir}/%{name} %{_bindir}/%{name}
 # apply exec permision to binary
 sudo chmod +x %{install_dir}/%{name}
 # copy icon
 sudo cp -f assets/icon.png %{icon_dir}
 # copy desktop file
 sudo cp -f assets/%{name}.desktop %{apps_dir}
-
-%post
-cd /
 
 #-- FILES ---------------------------------------------------------------------#
 %files
