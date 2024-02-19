@@ -51,12 +51,12 @@ sudo cp -f assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
-%{install_dir}/%{name}
-%{icon_dir}/icon.png
-%{apps_dir}/%{name}.desktop
+/%{install_dir}/%{name}
+/%{icon_dir}/icon.png
+/%{apps_dir}/%{name}.desktop
 %doc README.md
 %license LICENSE
-%{_bindir}/%{name}
+/%{_bindir}/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
