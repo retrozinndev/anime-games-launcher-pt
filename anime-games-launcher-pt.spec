@@ -1,6 +1,6 @@
 %define install_dir %{_libdir}/anime-games-launcher
-%define icon_dir %{_datarootdir}/icons/hicolor/512x512/apps
-%define apps_dir %{_datarootdir}/applications
+%define icon_dir %{_datadir}/icons/hicolor/512x512/apps
+%define apps_dir %{_datadir}/applications
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
