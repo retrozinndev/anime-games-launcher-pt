@@ -14,8 +14,9 @@ Url: https://github.com/retrozinndev/%{srcname}
 # cd anime-games-launcher-pt
 # tito build --tgz
 Source0: https://github.com/retrozinndev/%{srcname}/archive/refs/tags/v%{version}.tar.gz
-
 BuildArch: noarch
+
+%define srcdir %{_builddir}/%{name}-%{version}-%{release}.%{_arch}
 
 #-- APPLICATION DEPENDENCIES ---------------------------------------------------#
 Requires: git
@@ -46,7 +47,6 @@ Anime Games Launcher is an universal launcher for anime games.
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
 %prep
-echo "Build dir: %{buildroot}"
 %autosetup
 
 %build
@@ -55,14 +55,14 @@ cargo build --release
 %install
 # copy binary and create link
 mkdir -p %{install_dir}
-cp -f %{buildroot}/target/release/%{name} %{install_dir}
+cp -f %{srcdir}/target/release/%{name} %{install_dir}
 ln -s %{install_dir}/%{name} /usr/bin/%{name}
 # apply exec permision to binary
 chmod +x %{install_dir}/%{name}
 # copy icon
-cp -f %{buildroot}/assets/images/icon.png %{icon_dir}
+cp -f %{srcdir}/assets/images/icon.png %{icon_dir}
 # copy desktop file
-cp -f %{buildroot}/assets/%{name}.desktop %{apps_dir}
+cp -f %{srcdir}/assets/%{name}.desktop %{apps_dir}
 
 #-- FILES ---------------------------------------------------------------------#
 %files
