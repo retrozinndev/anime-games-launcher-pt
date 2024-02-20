@@ -1,6 +1,6 @@
-%define install_dir /usr/lib/anime-games-launcher
-%define icon_dir /usr/share/icons/hicolor/512x512/apps
-%define apps_dir /usr/share/applications
+%define install_dir %{_libdir}/anime-games-launcher
+%define icon_dir %{_datadir}/icons/hicolor/512x512/apps
+%define apps_dir %{_datadir}/applications
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
@@ -10,8 +10,8 @@ License: GPLv3
 Summary: Universal Linux launcher for anime games
 Url: https://github.com/retrozinndev/%{srcname}
 # Sources can be obtained by
-# git clone https://github.com/retrozinndev/anime-games-launcher-pt.git
-# cd anime-games-launcher-pt
+# git clone https://github.com/retrozinndev/%{srcname}.git
+# cd %{srcname}
 # tito build --tgz
 Source0: https://github.com/retrozinndev/%{srcname}/archive/refs/tags/v%{version}.tar.gz
 BuildArch: noarch
