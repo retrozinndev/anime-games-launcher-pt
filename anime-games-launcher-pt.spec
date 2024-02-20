@@ -56,13 +56,11 @@ chmod +x %{install_dir}/%{name}
 
 #-- LAUNCHER FILES ------------------------------------------------------------#
 %files
-%config %{getenv:HOME}/.local/share/%{name}/config.json
 %doc README.md
 %license LICENSE
-%{install_dir}
+%{install_dir}/*
 %{icon_dir}/icon.png
 %{apps_dir}/%{name}.desktop
-%{_bindir}/%{name}
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
