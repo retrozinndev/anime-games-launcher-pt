@@ -9,6 +9,11 @@ Release: 1%{?dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
 Url: https://github.com/retrozinndev/%{srcname}
+# Sources can be obtained by
+# git clone https://github.com/retrozinndev/anime-games-launcher-pt.git
+# cd anime-games-launcher-pt
+# tito build --tgz
+Source0: https://github.com/retrozinndev/%{srcname}/archive/refs/tags/v%{version}.tar.gz
 BuildArch: noarch
 
 #-- APPLICATION DEPENDENCIES ---------------------------------------------------#
@@ -34,24 +39,18 @@ Anime Games Launcher is an universal launcher for anime games.
 
 %install
 # copy binary
-sudo mkdir -p %{install_dir}
-sudo cp -f %{name} %{install_dir}
+mkdir -p %{buildroot}%{install_dir}
+cp -f %{name} %{buildroot}%{install_dir}
 # create link of binary
-sudo ln -sf %{install_dir}/%{name} %{_bindir}/%{name}
+ln -sf %{buildroot}%{install_dir}/%{name} %{buildroot}%{_bindir}/%{name}
 # apply exec permision to binary
-sudo chmod +x %{install_dir}/%{name}
+chmod +x %{buildroot}%{install_dir}/%{name}
 # copy icon
-sudo cp -f assets/icon.png %{icon_dir}
+cp -f assets/icon.png %{buildroot}%{icon_dir}
 # copy desktop file
-sudo cp -f assets/%{name}.desktop %{apps_dir}
-
-%post
-cd %{_buildrootdir}
-cd ..
-rm -rf *
+cp -f assets/%{name}.desktop %{buildroot}%{apps_dir}
 
 #-- LAUNCHER FILES ------------------------------------------------------------#
-cd /
 %files
 %config %{getenv:HOME}/.local/share/%{name}/config.json
 %doc README.md
