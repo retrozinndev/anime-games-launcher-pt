@@ -42,8 +42,10 @@ Anime Games Launcher is an universal launcher for anime games.
 mkdir -p %{buildroot}%{install_dir}
 cp -f %{name} %{buildroot}%{install_dir}
 # copy icon
+mkdir -p %{buildroot}%{icon_dir}
 cp -f assets/icon.png %{buildroot}%{icon_dir}
 # copy desktop file
+mkdir -p %{buildroot}%{apps_dir}
 cp -f assets/%{name}.desktop %{buildroot}%{apps_dir}
 
 %post
