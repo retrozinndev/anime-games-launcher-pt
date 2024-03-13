@@ -29,7 +29,7 @@ Suggests: gamescope
 Suggests: gamemode
 
 %description
-Anime Games Launcher is an universal launcher for anime games.
+Retrozinndev's fork of Anime Games Launcher. Anime Games Launcher is an universal launcher for anime games.
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
 %prep
