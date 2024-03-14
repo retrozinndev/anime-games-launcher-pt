@@ -13,7 +13,7 @@ Url: https://github.com/retrozinndev/%{srcname}
 # git clone https://github.com/retrozinndev/anime-games-launcher-pt.git
 # cd anime-games-launcher-pt
 # tito build --tgz
-Source0: https://github.com/retrozinndev/%{srcname}/archive/refs/tags/v%{version}.tar.gz
+Source0: https://github.com/retrozinndev/%{srcname}/releases/download/v%{version}/%{srcname}-copr-bin.zip
 BuildArch: noarch
 
 #-- APPLICATION DEPENDENCIES ---------------------------------------------------#
