@@ -22,6 +22,7 @@ Requires: libcurl
 Requires: libadwaita
 Requires: gtk4
 Requires: glibc
+Requires: wget
 
 #-- OPTIONAL DEPENDENCIES ------------------------------------------------------#
 Suggests: mangohud
@@ -36,6 +37,8 @@ Retrozinndev's fork of Anime Games Launcher. Anime Games Launcher is an universa
 %autosetup
 
 %build
+wget https://github.com/retrozinndev/%{srcname}/releases/download/v%{version}/%{srcname}
+
 
 %install
 # copy binary
