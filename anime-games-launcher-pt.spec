@@ -29,7 +29,6 @@ Suggests: gamescope
 Suggests: gamemode
 
 #-- BUILD DEPENDENCIES ---------------------------------------------------------#
-BuildRequires: "Development Tools"
 BuildRequires: rust
 BuildRequires: cargo
 BuildRequires: git
