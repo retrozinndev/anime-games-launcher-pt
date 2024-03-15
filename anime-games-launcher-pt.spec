@@ -37,7 +37,10 @@ Retrozinndev's fork of Anime Games Launcher. Anime Games Launcher is an universa
 %autosetup
 
 %build
+# get binary from latest release
 wget https://github.com/retrozinndev/%{srcname}/releases/download/v%{version}/%{srcname}
+# rename bin to default name
+mv anime-games-launcher-pt anime-games-launcher
 
 
 %install
