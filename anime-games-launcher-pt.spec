@@ -42,6 +42,7 @@ BuildRequires: glib2-devel
 BuildRequires: p7zip
 BuildRequires: gcc
 BuildRequires: gcc-c++
+BuildRequires: cairo-devel
 
 %description
 Anime Games Launcher is an universal launcher for anime games.
