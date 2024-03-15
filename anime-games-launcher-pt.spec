@@ -29,14 +29,15 @@ Suggests: gamescope
 Suggests: gamemode
 
 #-- BUILD DEPENDENCIES ---------------------------------------------------------#
+BuildRequires: "Development Tools"
 BuildRequires: rust
 BuildRequires: cargo
 BuildRequires: git
 BuildRequires: libcurl
 BuildRequires: libadwaita
 BuildRequires: gtk4
+BuildRequires: gtk4-devel
 BuildRequires: glibc
-BuildRequires: glib
 BuildRequires: glib2
 BuildRequires: glib2-devel
 BuildRequires: p7zip
@@ -46,6 +47,7 @@ BuildRequires: cairo-devel
 BuildRequires: cairo-gobject-devel
 BuildRequires: gdk-pixbuf2-devel
 BuildRequires: pango-devel
+BuildRequires: gdk4-devel
 
 %description
 Anime Games Launcher is an universal launcher for anime games.
