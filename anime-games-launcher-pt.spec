@@ -43,6 +43,7 @@ BuildRequires: p7zip
 BuildRequires: gcc
 BuildRequires: gcc-c++
 BuildRequires: cairo-devel
+BuildRequires: cairo-gobject-devel
 BuildRequires: gdk-pixbuf2-devel
 
 %description
