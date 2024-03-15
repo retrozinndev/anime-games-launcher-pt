@@ -45,6 +45,7 @@ BuildRequires: gcc-c++
 BuildRequires: cairo-devel
 BuildRequires: cairo-gobject-devel
 BuildRequires: gdk-pixbuf2-devel
+BuildRequires: pango-devel
 
 %description
 Anime Games Launcher is an universal launcher for anime games.
