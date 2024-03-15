@@ -1,5 +1,5 @@
-# Unnofficial Fedora Copr Repo
-This is a guide for installing an unnofficial copr version of the Anime Games Launcher.
+# Fork's Fedora Copr Repo
+This is a guide for installing a copr version of the Anime Games Launcher PT.
 
 ### Guide
 Assuming that you're using fedora, let's start.
