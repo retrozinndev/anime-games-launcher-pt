@@ -33,8 +33,7 @@ BuildRequires: rust
 BuildRequires: cargo
 BuildRequires: git
 BuildRequires: libcurl
-BuildRequires: libadwaita
-BuildRequires: gtk4
+BuildRequires: libadwaita-devel
 BuildRequires: gtk4-devel
 BuildRequires: glibc
 BuildRequires: glib2
