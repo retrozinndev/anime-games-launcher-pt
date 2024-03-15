@@ -48,7 +48,7 @@ An [Anime Games Launcher](https://github.com/an-anime-team) fork by [retrozinnde
 ### 📥️ Clone repo
 
 ```sh
-git clone https://github.com/an-anime-team/anime-games-launcher
+git clone https://github.com/retrozinndev/anime-games-launcher-pt.git
 ```
 
 ## 🔨 Build app
