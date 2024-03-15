@@ -29,6 +29,8 @@ Suggests: mangohud
 Suggests: gamescope
 Suggests: gamemode
 
+BuildRequires: wget
+
 %description
 Retrozinndev's fork of Anime Games Launcher. Anime Games Launcher is an universal launcher for anime games.
 
