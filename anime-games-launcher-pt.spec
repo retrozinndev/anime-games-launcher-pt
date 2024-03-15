@@ -38,6 +38,7 @@ BuildRequires: gtk4
 BuildRequires: glibc
 BuildRequires: glib
 BuildRequires: glib2
+BuildRequires: glib2-devel
 BuildRequires: p7zip
 BuildRequires: gcc
 BuildRequires: gcc-c++
