@@ -6,7 +6,7 @@ An [Anime Games Launcher](https://github.com/an-anime-team) fork by [retrozinnde
 [![Compile release build](https://github.com/retrozinndev/anime-games-launcher-pt/actions/workflows/compile_release_build.yml/badge.svg)](https://github.com/retrozinndev/anime-games-launcher-pt/actions/workflows/compile_release_build.yml)
 
 
-## How it looks
+## 🎨 Appearance
 | Main window | Game details |
 | :-: | :-: |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="repository/main-dark.png"><img src="repository/main-light.png"></picture> | <picture><source media="(prefers-color-scheme: dark)" srcset="repository/details-dark.png"><img src="repository/details-light.png"></picture> |
@@ -24,9 +24,12 @@ An [Anime Games Launcher](https://github.com/an-anime-team) fork by [retrozinnde
 <br>
 
 ## 📚️ Docs
-- [Launcher Integrations](repository/integrations);
-- [Fedora Copr Install](repository/guides/FEDORA_COPR.md);
-- [Changelog](CHANGELOG.md)
+
+| Link | Description |
+| - | - |
+| [Launcher Integrations](repository/integrations) | Documentation of the launcher integrations |
+| [Fedora Installation](repository/guides/FEDORA_COPR.md) | Guide: How to install on Fedora Distributions |
+| [Changelog](CHANGELOG.md) | Launcher's Changelog, contains all changes in every Launcher version |
 
 ## ♥️ Useful links
 
