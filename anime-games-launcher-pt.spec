@@ -5,7 +5,7 @@
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
-Version: 1.0.2.rc2
+Version: 1.0.2.rc3
 Release: 1%{?dist}
 License: GPLv3
 Summary: Universal Linux launcher for anime games
