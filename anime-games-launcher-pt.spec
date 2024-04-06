@@ -34,12 +34,9 @@ BuildRequires: rust
 BuildRequires: cargo
 BuildRequires: git
 BuildRequires: libcurl
-BuildRequires: libadwaita
 BuildRequires: libadwaita-devel
-BuildRequires: gtk4
 BuildRequires: gtk4-devel
 BuildRequires: glibc
-BuildRequires: glib2
 BuildRequires: glib2-devel
 BuildRequires: p7zip
 BuildRequires: gcc
