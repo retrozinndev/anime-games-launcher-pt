@@ -15,7 +15,7 @@ Url: https://github.com/retrozinndev/%{srcname}
 # cd %{srcname}
 # tito build --tgz
 Source0: https://github.com/retrozinndev/%{srcname}/archive/refs/tags/v%{version}.tar.gz
-BuildArch: x86_64
+BuildArch: noarch
 
 #-- APPLICATION DEPENDENCIES ---------------------------------------------------#
 Requires: git
