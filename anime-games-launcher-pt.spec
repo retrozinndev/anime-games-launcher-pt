@@ -1,6 +1,7 @@
 %define install_dir %{_libdir}/anime-games-launcher
 %define icon_dir %{_datadir}/icons/hicolor/512x512/apps
 %define apps_dir %{_datadir}/applications
+%define app_id moe.launcher.anime-games-launcher
 %global srcname anime-games-launcher-pt
 
 Name: anime-games-launcher
@@ -64,7 +65,7 @@ mkdir -p %{buildroot}%{install_dir}
 cp -f target/release/%{name} %{buildroot}%{install_dir}
 # copy icon
 mkdir -p %{buildroot}%{icon_dir}
-cp -f assets/images/icon.png %{buildroot}%{icon_dir}
+cp -f assets/images/%{app_id}.png %{buildroot}%{icon_dir}
 # copy desktop file
 mkdir -p %{buildroot}%{apps_dir}
 cp -f assets/%{name}.desktop %{buildroot}%{apps_dir}
