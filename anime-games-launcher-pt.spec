@@ -80,7 +80,7 @@ chmod +x %{install_dir}/%{name}
 %doc README.md
 %license LICENSE
 %{install_dir}/*
-%{icon_dir}/icon.png
+%{icon_dir}/moe.launcher.anime-games-launcher.png
 %{apps_dir}/%{name}.desktop
 
 #-- CHANGELOG -----------------------------------------------------------------#
