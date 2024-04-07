@@ -37,6 +37,7 @@ BuildRequires: libcurl
 BuildRequires: libadwaita-devel
 BuildRequires: gtk4-devel
 BuildRequires: glibc
+BuildRequires: glib2
 BuildRequires: glib2-devel
 BuildRequires: p7zip
 BuildRequires: gcc
